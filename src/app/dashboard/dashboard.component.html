@@ -1,0 +1,55 @@
+<body>
+  <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="/dashboard">LOTTO</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="/dashboard">สมาชิก<span class="sr-only">(current)</span></a>
+              </li>
+              <li>
+                <a class="nav-link btn btn-danger" (click)="logout()">ลงชื่อออก</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-8"></div>
+    <div class="col-2">
+        <button type="button" class="btn btn-success">+ เพิ่มสมาชิก</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-2"></div>
+    <div class="col-8">
+        <table class="table table-bordered">
+            <thead class="thead-light">
+              <tr>
+                <th>ชื่อ</th>
+                <th>เงิน(บาท)</th>
+                <th>Coin</th>
+              </tr>
+            </thead>
+            <tbody *ngFor="let u of user">
+              <tr>
+                <td>{{u.name}}</td>
+                <td>{{u.money}}</td>
+                <td>{{u.coin}}
+                  <span class="gbtn">
+                      <button class="btn btn-success">+</button>
+                      <button class="btndel btn btn-danger" (click)="btnClick(u.id)">Delete</button>
+                  </span> 
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          
+    </div>
+    <div class="col-2"></div>
+  </div>
+  </div>
+</body>
