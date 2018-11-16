@@ -1,9 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {RouterModule} from '@angular/router';
-import {HttpClientModule, HttpClient} from '@angular/common/http';
 
 import { AppComponent } from './app.component';
+<<<<<<< HEAD
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -17,26 +16,17 @@ import { AddUserComponent } from './add-user/add-user.component';
     LoginComponent,
     DashboardComponent,
     AddUserComponent
+=======
+
+@NgModule({
+  declarations: [
+    AppComponent
+>>>>>>> parent of f16d702... Weblotto
   ],
   imports: [
-    BrowserModule,
-    HttpClientModule,
-    RouterModule.forRoot([
-      {
-        path: 'login', component: LoginComponent
-      },
-      {
-        path: 'dashboard',
-        component: DashboardComponent,
-        canActivate: [AuthGuardService]
-      },
-      {
-        path: '', component: HomeComponent
-      }
-      
-    ])
+    BrowserModule
   ],
-  providers: [AuthGuardService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
