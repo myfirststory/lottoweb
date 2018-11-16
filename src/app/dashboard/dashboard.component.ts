@@ -29,4 +29,8 @@ export class DashboardComponent implements OnInit {
     this.router.navigate(['/login']);
     alert('Logout Successfully.')
   }
+
+  adduser(){
+    this.router.navigate(['/adduser']);
+  }
 }
